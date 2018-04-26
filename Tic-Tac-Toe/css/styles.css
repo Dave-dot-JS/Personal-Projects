@@ -1,0 +1,70 @@
+/*****************GENERAL STYLES*****************/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url('img/background.jpg');
+	background-size: cover;
+}
+
+
+/*****************HEADER STYLES*****************/
+header {
+	text-align: center;
+	font-family: 'Shadows into light', cursive;
+	font-size: 2em;
+	letter-spacing: 0.1em;
+	background-image: url('img/banner2.jpg');
+	background-size: cover;
+	background-repeat: none;
+	color: white;
+	border-bottom: 2px solid #EB6;
+}
+
+/*****************GAME BOARD STYLES*****************/
+.game-board {
+	margin: 2em auto;
+	background: #fff;
+	border: 3px solid black;
+	width: 80vh;
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.row {
+	flex: 1 0 33.3333%;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	display: flex;
+}
+
+.box {
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	flex: 1 0 33.333333%;
+}
+
+.box img {
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+
+
+
+
+
+/*****************FOOTER STYLES*****************/
+
+
+
+
+
+/*****************RESPONSIVE STYLES*****************/
