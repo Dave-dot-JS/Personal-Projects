@@ -1,15 +1,14 @@
 /*****************GENERAL STYLES*****************/
-*,
-*::before,
-*::after {
+* {
+	box-sizing: border-box;	
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	top: 0;
+	left: 0;
 }
 
-body {
-	background-image: url('img/background.jpg');
-	background-size: cover;
+html {
+	background: #ddd;
 }
 
 
@@ -19,20 +18,19 @@ header {
 	font-family: 'Shadows into light', cursive;
 	font-size: 2em;
 	letter-spacing: 0.1em;
-	background-image: url('img/banner2.jpg');
-	background-size: cover;
-	background-repeat: none;
-	color: white;
-	border-bottom: 2px solid #EB6;
+	color: #0af;
+	text-shadow: 0.02em 0.02em #444;
 }
+
+	header span {
+		color: #ff6fff;
+	}
 
 /*****************GAME BOARD STYLES*****************/
 .game-board {
-	margin: 2em auto;
-	background: #fff;
-	border: 3px solid black;
-	width: 80vh;
-	height: 80vh;
+	margin: 1.5em auto;
+	width: 40vh;
+	height: 40vh;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -40,21 +38,42 @@ header {
 
 .row {
 	flex: 1 0 33.3333%;
-	border-top: 2px solid black;
-	border-bottom: 2px solid black;
 	display: flex;
 }
 
+#mid-row {
+	border-top: 10px solid black;
+	border-bottom: 10px solid black;
+}
+
 .box {
-	border-left: 2px solid black;
-	border-right: 2px solid black;
 	flex: 1 0 33.333333%;
 }
 
-.box img {
-	height: 100%;
+.game-space {
+	transition: all 0.5s 0.01s;
+	border-radius: 20px;
+	top: 0;
+	left: 0;
 	width: 100%;
-	z-index: 10;
+	height: 100%;
+	text-align: center;
+	font-family: 'Gamja Flower', cursive;
+	font-size: 8em;
+	line-height: 0.7em;
+}
+
+	.game-space:hover {
+		background: #abf;
+	}
+
+#top-m,
+#mid-m,
+#bot-m {
+	border-left: 10px solid black;
+	border-right: 10px solid black;	
+	border-top: 10px hidden black;
+	border-bottom: 10px hidden black;
 }
 
 
@@ -68,3 +87,19 @@ header {
 
 
 /*****************RESPONSIVE STYLES*****************/
+
+@media screen and (min-width: 640px) {
+	header {
+		font-size: 2.5em;
+	}
+
+	.game-board {
+		width: 70vh;
+		height: 70vh;
+	}
+
+	.game-space {
+		font-size: 12em;
+		line-height: 0.8em;
+	}
+}
